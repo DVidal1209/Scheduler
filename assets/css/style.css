@@ -40,7 +40,6 @@ textarea {
 }
 
 .hour {
-  display: flex;
   align-items: center;
   background-color: #ffffff;
   color: #000000;

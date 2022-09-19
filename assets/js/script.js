@@ -46,6 +46,7 @@ container.on("click",".saveBtn" ,function(e){
     }
 )
 
+// Function to initialize page
 function init(){
     if (localStorage.text === null || localStorage.text === undefined){
         for (var i=0; i<timeBlocks.length; i++){
@@ -67,8 +68,6 @@ function init(){
     }
 }
 
-// var storedInitials = JSON.parse(localStorage.getItem("initials"));
-var stored = JSON.parse(localStorage.getItem("text"));
-console.log(stored);
+// Function calls
 init();
 checkTime();
