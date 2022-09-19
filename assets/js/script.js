@@ -12,18 +12,17 @@ var timeBlocks = [
 ];
 
 var date = moment().format("dddd, MMMM Do")
-// console.log(timeBlocks[0].children[0].children[0].textContent);
 $("#currentDay").html(date);
 
 function checkTime(){
     now = moment().format("HH")
     for(var i=0; i<timeBlocks.length;i++){
         if(timeBlocks[i].id<now){
-            timeBlocks[i].style.backgroundColor="grey";
+            timeBlocks[i].classList.add("past");
         }else if(timeBlocks[i].id == now){
-            timeBlocks[i].style.backgroundColor="red";
+            timeBlocks[i].classList.add("present");
         } else{
-            timeBlocks[i].style.backgroundColor="green";
+            timeBlocks[i].classList.add("future");
         }
     }
 }
