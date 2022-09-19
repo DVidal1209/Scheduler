@@ -10,6 +10,8 @@ green: has not happened yet
 
 In order to reset the scheduler you must use the reset button at the bottom of the page
 
+The Scheduler can be accessed at : https://dvidal1209.github.io/Scheduler/
+
 ## Screenshot
 ![Image of Scheduler](./assets/images/Scheduler.png)
 ## License
