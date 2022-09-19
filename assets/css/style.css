@@ -81,3 +81,14 @@ textarea {
 .height{
   height:100%;
 }
+
+#reset{
+  display: flex;
+  margin: auto;
+  width: fit-content;
+  justify-content: center;
+  background-color: #06aed5;
+  color:white;
+  font-size:120%;
+  margin-top: 5px;
+}
