@@ -11,7 +11,8 @@ var timeBlocks = [
     document.getElementById("17")
 ];
 var text = [];
-var container = $("#schedule"); 
+var container = $("#schedule");
+var resetBtn = document.getElementById("reset")
 
 // Code to show the date
 var date = moment().format("dddd, MMMM Do")
@@ -67,6 +68,25 @@ function init(){
         document.getElementById("17").children[1].value=stored[9];
     }
 }
+
+resetBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    var stored =  JSON.parse(localStorage.getItem("text"));
+    for (var i=08; i<18; i++){
+        stored[i-8] = "";
+    }
+    document.getElementById("08").children[1].value=stored[0];
+    document.getElementById("09").children[1].value=stored[1];
+    document.getElementById("10").children[1].value=stored[2];
+    document.getElementById("11").children[1].value=stored[3];
+    document.getElementById("12").children[1].value=stored[4];
+    document.getElementById("13").children[1].value=stored[5];
+    document.getElementById("14").children[1].value=stored[6];
+    document.getElementById("15").children[1].value=stored[7];
+    document.getElementById("16").children[1].value=stored[8];
+    document.getElementById("17").children[1].value=stored[9];
+    localStorage.setItem("text", JSON.stringify(stored));
+})
 
 // Function calls
 init();
